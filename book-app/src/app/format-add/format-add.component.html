@@ -1,0 +1,27 @@
+Create a new Format: 
+<form [formGroup]="createForm" (ngSubmit)="create()">
+    Name: 
+    <input required type="text" formControlName="name">
+    Heigh:
+    <input required type="number" formControlName="heigh">
+    Width:
+    <input required type="number" formControlName="width">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <span *ngIf="name.errors.required">
+            Name is required
+        </span>
+        <span *ngIf="name.errors.maxlength">
+            Name must be under 10 chars
+        </span>
+        <span *ngIf="heigh.errors.required">
+            Heigh is required
+        </span>
+        <span *ngIf="width.errors.required">
+            Width is required
+        </span>
+
+    </div>
+
+    <button type="submit" [disabled]="!createForm.valid">Create</button>
+</form>
+

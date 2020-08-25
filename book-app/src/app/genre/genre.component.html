@@ -1,0 +1,22 @@
+<h2>Genres:</h2>
+<ul *ngIf="genres">
+    <li  *ngFor="let genre of genres">
+        <a routerLink="/detail/{{genre.id}}">
+        
+        <span class="badge">{{genre.id}}</span>
+        <span>{{genre.name}}</span>
+    </a>
+    <button (click)="deleteGenre(genre.id)">X</button>
+    </li>
+    </ul>
+<div>
+    <label>
+        Nouveau Genre:
+        <input #genreName type="text">
+    </label>
+
+    <button (click)="addGenre(genreName.value); genreName.value = ''">
+        Ajouter
+    </button>
+    
+</div>

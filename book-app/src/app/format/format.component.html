@@ -1,0 +1,9 @@
+<div *ngIf="formats">
+    <div *ngFor="let format of formats">
+        <a [routerLink]="['/format', format.id]">
+            {{format.name}}
+        </a> 
+        <button (click)="delete(genre)">x</button>
+    </div>
+</div>
+
