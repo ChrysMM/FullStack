@@ -20,25 +20,30 @@ export class FormatAddComponent implements OnInit {
     this.createForm = this.fb.group(
       {
         name: ['', [Validators.required, Validators.maxLength(10)]],
-      
-        heigh: ['',[Validators.required]],
-      
-        width: ['',[Validators.required]],
+
+        height: ['', [Validators.required]],
+
+        width: ['', [Validators.required]],
+
+        landscape: ['', true],
       }
     )
   }
-  get name() { 
+  get name() {
     return this.createForm.get('name')
 
   }
-  get heigh(){
-    return this.createForm.get('heigh')
+  get height() {
+    return this.createForm.get('height')
   }
-  get width(){
+  get width() {
     return this.createForm.get('width')
   }
+  get landscape() {
+    return this.createForm.get('landscape')
+  }
 
-  create(){
+  create() {
     const format: Format = this.createForm.value;
     this.fs.create(format).subscribe(
       response => console.log(response)

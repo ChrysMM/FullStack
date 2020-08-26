@@ -21,8 +21,8 @@ export class FormatService {
   create(format: Format): Observable<Format>{
     return this.http.post<Format>(this.url, format);
   }
-  update(genre: Format): Observable<Format>{
-    return this.http.put<Format>(`${this.url}/${genre.id}`, genre);
+  update(format: Format): Observable<Format>{
+    return this.http.put<Format>(`${this.url}/${format.id}`, format);
   }
 
   delete(id: number): Observable<any>{

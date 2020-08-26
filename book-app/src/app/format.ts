@@ -1,7 +1,7 @@
 export interface Format {
     id: number;
     name: string;
-    heigh: number;
+    height: number;
     width: number;
     landscape: boolean;
     book: any[];
