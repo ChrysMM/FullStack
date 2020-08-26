@@ -11,7 +11,7 @@
         </span>
     </div>
     <label>~Heigh:</label>
-    <input required type="number" formControlName="heigh">
+    <input required type="number" formControlName="height">
     <div *ngIf="height.invalid && (height.dirty || height.touched)">
         <span *ngIf="height.errors.required">
             Height is required
@@ -25,7 +25,7 @@
         </span>
     </div>
     Landscape:
-    <input type="checkbox" formControlName="Landscape">
+    <input type="checkbox" formControlName="landscape">
 
 <button type="submit" [disabled]="!createForm.valid">Create</button>
 </form>

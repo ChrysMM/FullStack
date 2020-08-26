@@ -25,7 +25,7 @@ export class FormatAddComponent implements OnInit {
 
         width: ['', [Validators.required]],
 
-        landscape: ['', true],
+        landscape: ['', null],
       }
     )
   }
