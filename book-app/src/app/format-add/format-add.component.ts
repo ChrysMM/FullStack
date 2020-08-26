@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormatService } from '../format.service';
 import { Format } from '../format';
-
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Format } from '../format';
 })
 export class FormatAddComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private fs: FormatService) { }
+  constructor(private fb: FormBuilder, private fs: FormatService, private router: Router) { }
 
   createForm: FormGroup;
 
@@ -46,7 +46,7 @@ export class FormatAddComponent implements OnInit {
   create() {
     const format: Format = this.createForm.value;
     this.fs.create(format).subscribe(
-      response => console.log(response)
+      () => this.router.navigateByUrl("/format")
     );
   }
 }

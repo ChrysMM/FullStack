@@ -1,6 +1,6 @@
-Create a new Format:
+<h2>Create a new Format:</h2>
 <form [formGroup]="createForm" (ngSubmit)="create()">
-    <label>>Name:</label>
+    <label>~Name:</label>
     <input required type="text" formControlName="name">
     <div *ngIf="name.invalid && (name.dirty || name.touched)">
         <span *ngIf="name.errors.required">
@@ -10,14 +10,14 @@ Create a new Format:
             Name must be under 10 chars
         </span>
     </div>
-    <label>Heigh:</label>
+    <label>~Heigh:</label>
     <input required type="number" formControlName="heigh">
     <div *ngIf="height.invalid && (height.dirty || height.touched)">
         <span *ngIf="height.errors.required">
             Height is required
         </span>
     </div>
-    <label>Width:</label>
+    <label>~Width:</label>
     <input required type="number" formControlName="width">
     <div *ngIf="width.invalid && (width.dirty || width.touched)">
         <span *ngIf="width.errors.required">
