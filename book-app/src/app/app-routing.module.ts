@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'genre/add', component: GenreAddComponent},
   {path: 'format', component: FormatComponent},
   {path: 'format/add', component: FormatAddComponent},
-  {path: 'detail/:id', component: FormatDetailComponent}
+  {path: 'format/:id', component: FormatDetailComponent}
 
 ];
 

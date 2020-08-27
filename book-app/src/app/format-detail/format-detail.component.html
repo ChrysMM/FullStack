@@ -1,18 +1,31 @@
 <div *ngIf="format">
     id: {{format.id}}
-
-    name:
+    
 
     <div *ngIf="editMode">
+    
         <form [formGroup]="formEdit" (ngSubmit)="edit()">
             <input type="text" formControlName="name">
-            <button type="submit">ok</button>
+            <input type="number" formControlName="height">
+            <input type="number" formControlName="widht">
+            <input type="checkbox" formControlName="landscape">
+            <button type="submit">Valider</button>
+    
         </form>
-    </div>
-
+        </div>
+       
     <span *ngIf="!editMode">
-        {{format.name}}
+        name: {{format.name}}
+        height:{{format.height}}
+        widht:{{format.widht}}
+        landscape:{{format.landscape}}
     </span>
+    
+<!--
+        affichage du bouton edit
+    -->
+    
+        <button (click)="toggleEdit()">Edit</button>
 
-    <button (click)="toggleEdit()">edit</button>
-</div>
+
+    </div>

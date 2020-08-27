@@ -30,7 +30,10 @@ export class FormatDetailComponent implements OnInit {
   initForm(): FormGroup {
     return this.fb.group(
       {
-        name: [this.format.name]
+        name: [this.format.name],
+        height: [this.format.height],
+        widht: [this.format.width],
+        landscape: [this.format.landscape]
       }
     )
   }

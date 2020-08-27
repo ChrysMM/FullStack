@@ -3,7 +3,7 @@
     <li  *ngFor="let genre of genres">
         <a routerLink="/detail/{{genre.id}}">
         
-        <span class="badge">{{genre.id}}</span>
+        <span class="badge">{{genre.id}}</span> 
         <span>{{genre.name}}</span>
     </a>
     <button (click)="deleteGenre(genre.id)">X</button>
